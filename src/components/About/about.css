@@ -1,0 +1,137 @@
+.about__container {
+    display: grid;
+    grid-template-columns: 30% 55%;
+    gap: 15%;
+}
+.about__me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+    border-radius: 2rem;
+}
+.about__me-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0deg);
+}
+
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.about__card {
+    text-align: center;
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: var(--transition);
+}
+    .about__card:hover {
+        background: transparent;
+        border: 1px solid var(--color-bg-variant);
+    }
+    .about__card small {
+        line-height: 1;
+    }
+.mb-2 {
+    margin-bottom: 1rem;
+}
+.about__card-icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+.about__card h5 {
+    font-size: 0.95rem;
+}
+.about__card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+    line-height: 0.5!important;
+}
+.about__content >p {
+color: var(--color-light);
+margin-bottom: 0.5rem;
+font-size: 0.9rem;
+}
+.about__content a {
+    margin: 2rem auto;
+ }
+.display-none {
+    display: none;
+}
+/* MEDIUM SCREENS(TABLETS AND SMALL LAPTOPS) */
+@media (max-width: 1024px) {
+    .container {
+        width :var(--container-width-md);
+        padding-top: 0rem;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__me {
+        width: 50%;
+        display: grid;
+        place-items: center;
+        border-radius: 2rem;
+        margin: 0 auto 4rem;
+    }
+    .about__content a {
+       margin: 2rem auto;
+       display: flex;
+       justify-content: center;
+    }
+    .about__card {
+        padding: 2rem;
+    }
+}
+
+
+/* ===================SMALL DEVICES(MOBILE PHONES)================= */
+@media (max-width: 600px) {
+    .container {
+        width :var(--container-width-sm);
+        padding-top: 0rem;
+    }
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .about__card {
+        padding: 1rem 2rem;
+    }
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    
+}
+/* ===================VERY SMALL DEVICES(MOBILE PHONES)================= */
+@media (max-width: 400px) {
+    .about__card {
+        padding: 1rem;
+    }
+    .about__card h5 {
+        font-size: 0.65rem;
+    }
+    .about__card small {
+    font-size: 0.5rem;
+    }
+}

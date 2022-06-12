@@ -1,0 +1,60 @@
+.container.contact__container {
+    display: grid;
+    gap: 2rem;
+}
+.contact__options {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.contact__option {
+    text-align: center;
+    background-color: var(--color-bg-variant);
+    padding: 1.2rem;
+    border: 1px solid var(--color-bg-variant);
+    border-radius: 1.2rem;
+    transition: var(--transition);
+}
+.contact__option:hover {
+    background-color: transparent;
+}
+.contact__option-icon {
+    font-size: 1.5rem;
+}
+.contact__option a {
+    margin-top: 0.75rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+.contact__option h5 {
+    color: var(--color-light);
+}
+
+
+/* ===================MEDIUM DEVICES(TABLETS)================= */
+@media (max-width: 1024px) {
+ .container.contact__container {
+     width: var(--container-width-md);
+     
+ }
+ .contact__options {
+     width: 50%;
+   grid-template-columns: 1fr;
+   margin: 0 auto;
+}
+/* .contact__option {
+    width: 100%;
+} */
+
+}
+
+/* ===================SMALL DEVICES(MOBILE PHONES)================= */
+@media (max-width: 600px) {
+    .container.contact__container {
+        width: var(--container-width-sm);
+    }
+    .contact__options {
+        width: 100%;
+   }
+ 
+}
